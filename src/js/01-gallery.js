@@ -1,7 +1,9 @@
 import { galleryItems } from './gallery-items.js';
 // Change code below this line
 
-//console.log(galleryItems);
+console.log(galleryItems);
+
+// ********** CREATING OF NEW CODE HTML FOR GALLERY **********
 
 const galleryList = document.querySelector('.gallery');
 
@@ -17,7 +19,18 @@ galleryItems.forEach(item => {
                             </a>
                         </div>`
     
-    galleryList.insertAdjacentHTML("afterbegin", galleryHtml);
+    galleryList.insertAdjacentHTML("beforeend", galleryHtml);
 
 });
 
+// ********** GETTING ADRES URL OF LARGER IMAGE ****************
+
+galleryList.addEventListener('click', (event) => {
+   if(event.target.tagName === 'IMG'){
+    const largeImageUrl = event.target.getAttribute("data-source");
+    console.log(largeImageUrl);
+
+    // event.target.src = largeImageUrl;
+    // console.log(event.target.src);
+   }
+});
