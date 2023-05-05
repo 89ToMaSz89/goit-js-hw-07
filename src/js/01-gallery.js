@@ -1,6 +1,8 @@
 import { galleryItems } from './gallery-items.js';
 // Change code below this line
 
+//import * as basicLightbox from 'basiclightbox';
+
 console.log(galleryItems);
 
 // ********** CREATING OF NEW CODE HTML FOR GALLERY **********
@@ -34,3 +36,6 @@ galleryList.addEventListener('click', (event) => {
     // console.log(event.target.src);
    }
 });
+
+// const testLightbox = basicLightbox.create(`<p> cześć </p>`);
+// testLightbox.show();
