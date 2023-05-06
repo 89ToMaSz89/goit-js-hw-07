@@ -21,7 +21,7 @@ galleryItems.forEach(item => {
                             </a>
                         </div>`
     
-    galleryList.insertAdjacentHTML("beforeend", galleryHtml);
+    galleryList.insertAdjacentHTML('beforeend', galleryHtml);
 
 });
 
