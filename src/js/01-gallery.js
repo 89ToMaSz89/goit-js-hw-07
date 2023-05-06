@@ -28,14 +28,24 @@ galleryItems.forEach(item => {
 // ********** GETTING ADRES URL OF LARGER IMAGE ****************
 
 galleryList.addEventListener('click', (event) => {
+
+    event.preventDefault(); 
+
    if(event.target.tagName === 'IMG'){
     const largeImageUrl = event.target.getAttribute("data-source");
-    console.log(largeImageUrl);
+    
+    const windowModalImage = basicLightbox.create(      // Creating of window modal
+        `<img src = "${largeImageUrl}">`
+    );
+    windowModalImage.show();
 
-    // event.target.src = largeImageUrl;
-    // console.log(event.target.src);
+    document.addEventListener('keydown', (event) => {       // Closing the window modal after pressing of key "escape"
+        if(event.key === 'Escape'){
+            windowModalImage.close();
+        }
+
+    });
    }
+
 });
 
-// const testLightbox = basicLightbox.create(`<p> cześć </p>`);
-// testLightbox.show();
