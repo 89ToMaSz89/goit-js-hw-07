@@ -10,10 +10,10 @@ console.log(galleryItems);
 const galleryList = document.querySelector('.gallery');
 
 galleryItems.forEach(item => {
-    const galleryHtml = `<div class = "gallery_item">
-                            <a class = "gallery_link" href = "${item.original}">
+    const galleryHtml = `<div class = "gallery__item">
+                            <a class = "gallery__link" href = "${item.original}">
                                 <img
-                                    class = "gallery_image"
+                                    class = "gallery__image"
                                     src = "${item.preview}"
                                     data-source = "${item.original}"
                                     alt = "${item.description}"

@@ -10,9 +10,9 @@ galleryItems.forEach(event => {
 
     const galleryHtml = `
         <li>
-            <a class = "gallery_item" href = "${event.original}">
+            <a class = "gallery__item" href = "${event.original}">
                 <img 
-                    class = "gallery_image" 
+                    class = "gallery__image" 
                     src = "${event.preview}"
                     alt = "${event.description}">
             </a>
